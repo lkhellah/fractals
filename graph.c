@@ -1,3 +1,4 @@
+// makes a graph size based on entered integer
 #include "FPToolkit.c"
 
 int main()
