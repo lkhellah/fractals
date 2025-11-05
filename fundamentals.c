@@ -11,20 +11,19 @@ int n = 13;
 
 int main() {
     G_init_graphics(400,400);
-    G_rgb(0,0,0); G_clear();
-    G_rgb(0,1,0); G_fill_polygon(x,y,n);
 
-    for (int i = 0; i < 4; i++) {
-       // translate(100,50);
-       // scale(0.5, 0.5);
-        rotate(30);
+    while(0==0) {
+        G_rgb(0,0,0); G_clear();
+        G_rgb(0,1,0); G_fill_polygon(x,y,n);
+
+        if (G_wait_key() == 'g') {break;}
+        
+        translate(-200,-200);
+        scale(0.98, 0.98);
+        rotate(2);
+        translate(200,200);
+    
     }
-
-
-    G_rgb(0,0,1); G_fill_polygon(x,y,n);
-
-    G_wait_key();
-
 
     return 0;
 }
