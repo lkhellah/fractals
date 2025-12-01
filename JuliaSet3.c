@@ -20,14 +20,16 @@ int main() {
     double max = 10;
     int numreps = 10;    // number of iterations per point
     double maxabs = 4.0;  // threshold for divergence
+    double xc=0;
+    double yc=0;
 
     c = I;
     r = 2;
     // Loop over every pixel
     for (xp = 0; xp < width; xp++) {
         for ( yp = 0; yp < height; yp++) {
-            x = x*c + r *(xp-400)/400;
-            y = y*c + r *(yp-400)/400;
+            x = xc + r *(xp-400)/400;
+            y = yc + r *(yp-400)/400;
             z = x + y*I;
             for (k = 0; k < numreps; k++) {
                 z = z*z + c;
